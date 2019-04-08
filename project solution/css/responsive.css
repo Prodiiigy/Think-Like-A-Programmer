@@ -1,0 +1,9 @@
+@media screen and (min-width:600px) {
+  article {
+    width: 100%;
+  }
+}
+@media screen and (max-width:760px) {
+  article {
+    width: 100%;
+  }

@@ -1,0 +1,131 @@
+
+/* Big tablets to desktop screen size from 1024px to 1200px(width smaller than 1140px) */
+
+@media screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    .row {padding: 0 2%; }
+
+}
+
+
+/* larger screen like iPad from 768px to 1024px */
+
+@media screen and (max-width: 1023px) {
+    body {font-size: 18px; }
+
+    section {padding: 50px; }
+
+    .long-copy {
+        width: 80%;
+        margin-left: 10%;
+    }
+    .icon-small {
+        width: 10px;
+        margin-right: 5px; }
+
+    .city-feature {font-size: 80%;
+    padding-top: 5px; }
+
+     .steps-box {
+        margin-top: 10px;
+     }
+
+     .app-screen {
+       width: 50%;
+     }
+
+     .steps-box:last-child {
+        margin-top: 10px;
+     }
+
+     .works-step {
+        margin-bottom: 60px;
+     }
+
+     .btn-app img {
+         height: 40px;
+     }
+
+     .steps-box:first-child {
+        margin-top: 20px;
+        margin-right: -10px;
+        font-size: 100%;
+     }
+     .works-step:last-of-type {
+       margin-bottom: 50px;
+     }
+
+     .plan-box {
+         width: 100%;
+         margin-left: 0;
+     }
+
+     .price-plan {font-size: 200%; }
+
+     .plan-box ul li {
+       padding: 10px 0;
+     }
+
+     .contact-form {width: 80%; }
+}
+
+
+
+/* larger screen from 481px to 767px */
+
+@media screen and (max-width: 767px) {
+    body {font-size: 16px; }
+
+    section {padding: 30px; }
+
+    .row, .hero-text-box {padding: 0 4px;}
+    .main-nav { display: none; }
+
+    .col {
+        width: 100%;
+        margin: 0 0 4% 0;
+
+     }
+
+    .long-copy {
+        width: 100%;
+        margin-left: 0%;
+    }
+    h1 {font-size: 180%; }
+    h2 {font-size: 150%; }
+
+    .works-step {
+       margin-bottom: 40px;
+    }
+    .works-step:last-of-type {
+      margin-bottom: 40px; }
+
+      .works-step div {
+        width: 40px;
+        height: 40px;
+        padding: 3px;
+        margin-right: 15px;
+        font-size: 100%;
+      }
+
+      .btn-app img {
+          height: 40px;
+          margin-left: 20px;
+      }
+
+      .steps-box:first-child {text-align: center; }
+
+      
+
+}
+
+
+/* small screen: form 0 to 480px */
+@media screen and (min-width: 480px) {
+    section {padding: 25px 0; }
+    contact-form {width: 100%; }
+
+}

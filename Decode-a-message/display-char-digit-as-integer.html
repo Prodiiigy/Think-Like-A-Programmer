@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Char to Integer.
+        </title>
+    </head>
+    <body>
+        <p>Enter as many number as u like: </p>
+
+        <button id="clickMe" onclick="checkDigit();">Get Integer</button>
+        <script>
+           document.getElementById("clickMe").onclick = function checkDigit() {
+               var digitChar;
+               do { 
+                 digitChar = prompt();
+                 var number = parseInt(digitChar);
+                 digitChar = prompt();
+                 while ((digitChar != 10) && (digitChar != ',')) { 
+                     number = number * 10 + parseInt(digitChar);
+                     digitChar = prompt();
+                 }
+                 console.log("Numbered entered: " + number + "\n");
+               }  while (digitChar != 10);
+           }
+          
+        </script>
+    </body>
+</html>

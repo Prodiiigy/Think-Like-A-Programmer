@@ -1,0 +1,67 @@
+ <!DOCTYPE html>
+<html>
+    <body>
+        <input type="button" id="clickMe" value="Get Mode" onclick="getChar()"; />
+
+        <script>
+          document.getElementById("clickMe").onclick = function getChar() {
+              var outputCharacter;
+              var modeType = [
+                  'UPPERCASE',
+                  'LOWERCASE',
+                  'PUNCTUATION'
+              ]
+              var mode = modeType[0];
+              var chr = 'A';
+              var ch = 'a';
+              var digitChar;
+               do {
+                 digitChar = prompt();
+                 var number = parseInt(digitChar);
+                 digitChar = prompt();
+                 while ((digitChar != 10) && (digitChar != ',')) {
+                     number = number * 10 + parseInt(digitChar);
+                     digitChar = prompt();
+                 }
+                 switch(mode) {
+                      case modeType[0]:
+                         number = number % 27;
+                         outputCharacter = number + (chr.charCodeAt(0)) - 1;
+                         if (number == 0) {
+                             mode = modeType[1];
+                             continue;
+                         }
+                         break;
+                      case modeType[1]:
+                            number = number % 27;
+                            outputCharacter = number + (ch.CharCodeAt(0)) - 1;
+                            if (number == 0) {
+                                mode = modeType[2];
+                                continue;
+                            }
+                            break;
+                      case modeType[2]:
+                         number = number % 9;
+                         switch (number) {
+                            case 1: outputCharacter = '!'; break;
+                            case 2: outputCharacter = '?'; break;
+                            case 3: outputCharacter = ','; break;
+                            case 4: outputCharacter = '.'; break;
+                            case 5: outputCharacter = ''; break;
+                            case 6: outputCharacter = ';'; break;
+                            case 7: outputCharacter = '"'; break;
+                            case 8: outputCharacter = '\''; break;
+                         }
+                         if (number == 0) {
+                             mode = modeType[0];
+                             continue;
+                         }
+                         break;
+                 }
+                 document.write("outputCharacter");
+            } while (number != 10);
+            document.write("\n");
+          }
+        </script>
+    </body>
+</html>
